@@ -36,10 +36,10 @@ type HTTPOutputConfig struct {
 	Location string `toml:"location"`
 
 	// Username for HTTP Basic Auth
-	HTTPBasicAuthUser string `toml:"http-user"`
+	HTTPBasicAuthUser string `toml:"user"`
 
 	// Password for HTTP Basic Auth
-	HTTPBasicAuthPass string `toml:"http-pass"`
+	HTTPBasicAuthPass string `toml:"pass"`
 
 	// Timeout sets a per-backend timeout for write requests. (Default 10s)
 	// The format used is the same seen in time.ParseDuration
