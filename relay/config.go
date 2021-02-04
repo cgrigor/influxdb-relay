@@ -35,6 +35,12 @@ type HTTPOutputConfig struct {
 	// Location should be set to the URL of the backend server's write endpoint
 	Location string `toml:"location"`
 
+	// Username for HTTP Basic Auth
+	HTTPBasicAuthUser string `toml:"http-user"`
+
+	// Password for HTTP Basic Auth
+	HTTPBasicAuthPass string `toml:"http-pass"`
+
 	// Timeout sets a per-backend timeout for write requests. (Default 10s)
 	// The format used is the same seen in time.ParseDuration
 	Timeout string `toml:"timeout"`
@@ -52,12 +58,6 @@ type HTTPOutputConfig struct {
 	// Skip TLS verification in order to use self signed certificate.
 	// WARNING: It's insecure. Use it only for developing and don't use in production.
 	SkipTLSVerification bool `toml:"skip-tls-verification"`
-
-	// Username for HTTP Basic Auth
-	HTTPBasicAuthUser string `toml:"http-user"`
-
-	// Password for HTTP Basic Auth
-	HTTPBasicAuthPass string `toml:"http-pass"`
 }
 
 type UDPConfig struct {
